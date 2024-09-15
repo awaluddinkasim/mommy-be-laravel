@@ -21,7 +21,6 @@ abstract class Controller
         return redirect()->back()->with($status, $message);
     }
 
-
     protected function success($data = null, $message = null): JsonResponse
     {
         return response()->json([

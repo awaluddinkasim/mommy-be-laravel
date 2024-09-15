@@ -22,7 +22,7 @@ abstract class Controller
     }
 
 
-    protected function success($data, $message = null): JsonResponse
+    protected function success($data = null, $message = null): JsonResponse
     {
         return response()->json([
             'status' => 'success',

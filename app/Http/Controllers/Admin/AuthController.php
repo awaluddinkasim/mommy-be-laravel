@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class AuthController extends Controller
@@ -21,7 +22,9 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if (!auth('admin')->attempt($request->only('email', 'password'))) {
+        $remember = $request->remember ? true : false;
+
+        if (!Auth::attempt($request->only('email', 'password'), $remember)) {
             return $this->back('error', 'Email atau Password salah!');
         }
 
@@ -36,7 +39,7 @@ class AuthController extends Controller
 
         $request->session()->regenerateToken();
 
-        auth('admin')->logout();
+        Auth::logout();
 
         return $this->redirect('/', 'success', 'Logout Berhasil');
     }

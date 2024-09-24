@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -16,7 +17,7 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if (!auth('api')->attempt($request->only('email', 'password'))) {
+        if (!Auth::guard('api')->attempt($request->only('email', 'password'))) {
             return $this->error('Email atau Password salah!');
         }
 

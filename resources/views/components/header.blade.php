@@ -56,7 +56,7 @@
                                 </div>
                             </li>
                         @else
-                            <li class="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ isset($menu['route']) ? route($menu['route']) : '#' }}">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         {!! $menu['icon'] !!}

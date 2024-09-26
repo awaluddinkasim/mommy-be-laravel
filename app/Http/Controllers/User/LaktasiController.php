@@ -6,28 +6,28 @@ use App\Models\Laktasi;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\LaktasiResource;
+use App\Models\Baby;
 
 class LaktasiController extends Controller
 {
-    public function get(Request $request): JsonResponse
+    public function get(Baby $baby): JsonResponse
     {
-        $user = $request->user();
-
-        $daftarLaktasi = Laktasi::where('user_id', $user->id)->get();
+        $daftarLaktasi = LaktasiResource::collection(Laktasi::where('baby_id', $baby->id)->get());
 
         return $this->success([
             'daftarLaktasi' => $daftarLaktasi
         ]);
     }
 
-    public function mulai(Request $request): JsonResponse
+    public function mulai(Request $request, Baby $baby): JsonResponse
     {
         $data = $request->validate([
             'mulai' => 'required',
             'posisi' => 'required',
         ]);
 
-        $data['user_id'] = $request->user()->id;
+        $data['baby_id'] = $baby->id;
 
         Laktasi::create($data);
 

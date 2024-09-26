@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\NutrisiHarianResource;
 use App\Models\NutrisiHarian;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class NutrisiHarianController extends Controller
     {
         $user = $request->user();
 
-        $nutrisiHarian = NutrisiHarian::where('user_id', $user->id)->get();
+        $nutrisiHarian = NutrisiHarianResource::collection(NutrisiHarian::where('user_id', $user->id)->get());
 
         return $this->success([
             'nutrisiHarian' => $nutrisiHarian

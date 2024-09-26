@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('laktasi', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('baby_id')->constrained('babies')->cascadeOnDelete();
             $table->timestamp('mulai');
             $table->timestamp('selesai')->nullable();
             $table->enum('posisi', ['Kiri', 'Kanan']);

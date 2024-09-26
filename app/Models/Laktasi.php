@@ -13,7 +13,7 @@ class Laktasi extends Model
     protected $table = 'laktasi';
 
     protected $fillable = [
-        'user_id',
+        'baby_id',
         'mulai',
         'selesai',
         'posisi'

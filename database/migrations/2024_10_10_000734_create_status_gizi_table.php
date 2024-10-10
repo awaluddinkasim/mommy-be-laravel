@@ -19,9 +19,9 @@ return new class extends Migration
             $table->double('bb_saat_hamil');
             $table->double('bb_setelah_melahirkan');
             $table->string('aktifitas_harian');
-            $table->string('imt_pra_hamil');
-            $table->string('imt_post_hamil');
-            $table->string('resistensi_bb');
+            $table->double('imt_pra_hamil');
+            $table->double('imt_post_hamil');
+            $table->double('resistensi_bb');
             $table->double('kebutuhan_kalori');
             $table->timestamps();
         });

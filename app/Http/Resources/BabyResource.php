@@ -15,6 +15,7 @@ class BabyResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'nama' => $this->nama,
             'jenis_kelamin' => $this->jenis_kelamin,
             'tgl_lahir' => $this->tgl_lahir

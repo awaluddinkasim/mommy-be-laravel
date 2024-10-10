@@ -14,7 +14,9 @@ class LaktasiController extends Controller
 {
     public function get(Baby $baby, Request $request): JsonResponse
     {
-        $tanggal = $request->get('tanggal', date('Y-m-d'));
+        if (!$request->get('tanggal')) return $this->error('Parameter tanggal tidak boleh kosong');
+
+        $tanggal = $request->get('tanggal');
 
         $riwayatLaktasi = Laktasi::where('baby_id', $baby->id)
             ->whereDate('created_at', $tanggal)->get();

@@ -13,11 +13,6 @@ class AuthController extends Controller
 {
     public function login(Request $request): JsonResponse
     {
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required'
-        ]);
-
         if (!Auth::guard('api')->attempt($request->only('email', 'password'))) {
             return $this->error('Email atau Password salah!');
         }

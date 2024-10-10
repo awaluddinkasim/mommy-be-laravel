@@ -44,4 +44,15 @@ class ObstetriController extends Controller
             'daftarObstetri' => ObstetriResource::collection($daftarObstetri),
         ]);
     }
+
+    public function destroy(Request $request, Obstetri $obstetri)
+    {
+        $obstetri->delete();
+
+        $daftarObstetri = Obstetri::where('user_id', $request->user()->id)->get();
+
+        return $this->success([
+            'daftarObstetri' => ObstetriResource::collection($daftarObstetri),
+        ]);
+    }
 }

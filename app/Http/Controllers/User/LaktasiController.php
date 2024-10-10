@@ -7,17 +7,16 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\LaktasiResource;
+use App\Models\Baby;
 use Carbon\Carbon;
 
 class LaktasiController extends Controller
 {
-    public function get(Request $request): JsonResponse
+    public function get(Baby $baby, Request $request): JsonResponse
     {
-        $user = $request->user();
-
         $tanggal = $request->get('tanggal', date('Y-m-d'));
 
-        $riwayatLaktasi = Laktasi::where('user_id', $user->id)
+        $riwayatLaktasi = Laktasi::where('baby_id', $baby->id)
             ->whereDate('created_at', $tanggal)->get();
 
         return $this->success([

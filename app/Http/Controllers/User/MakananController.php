@@ -12,6 +12,8 @@ class MakananController extends Controller
 {
     public function get(): JsonResponse
     {
+        $makanan = MakananResource::collection(Makanan::all());
+
         return $this->success([
             'makanan' => MakananResource::collection(Makanan::all()),
         ]);

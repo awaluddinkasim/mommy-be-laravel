@@ -6,6 +6,8 @@ use App\Models\Laktasi;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\LaktasiResource;
+use Carbon\Carbon;
 
 class LaktasiController extends Controller
 {
@@ -13,34 +15,28 @@ class LaktasiController extends Controller
     {
         $user = $request->user();
 
-        $daftarLaktasi = Laktasi::where('user_id', $user->id)->get();
+        $tanggal = $request->get('tanggal', date('Y-m-d'));
+
+        $riwayatLaktasi = Laktasi::where('user_id', $user->id)
+            ->whereDate('created_at', $tanggal)->get();
 
         return $this->success([
-            'daftarLaktasi' => $daftarLaktasi
+            'riwayatLaktasi' => LaktasiResource::collection($riwayatLaktasi),
         ]);
     }
 
-    public function mulai(Request $request): JsonResponse
+    public function store(Request $request): JsonResponse
     {
         $data = $request->validate([
+            'baby_id' => 'required',
             'mulai' => 'required',
+            'durasi' => 'required',
             'posisi' => 'required',
         ]);
 
-        $data['user_id'] = $request->user()->id;
+        $data['selesai'] = Carbon::parse($data['mulai'])->addMillisecond($data['durasi']);
 
         Laktasi::create($data);
-
-        return $this->success();
-    }
-
-    public function selesai(Request $request, Laktasi $laktasi): JsonResponse
-    {
-        $data = $request->validate([
-            'selesai' => 'required',
-        ]);
-
-        $laktasi->update($data);
 
         return $this->success();
     }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('makanan_id')->constrained('makanan')->cascadeOnDelete();
             $table->string('sesi');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }

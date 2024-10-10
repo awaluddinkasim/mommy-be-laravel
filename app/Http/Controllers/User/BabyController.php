@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\BabyResource;
 use App\Models\Baby;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -13,8 +14,10 @@ class BabyController extends Controller
     {
         $user = $request->user();
 
+        $babies = Baby::where('user_id', $user->id)->get();
+
         return $this->success([
-            'babies' => Baby::where('user_id', $user->id)->get()
+            'babies' => BabyResource::collection($babies),
         ]);
     }
 
@@ -26,17 +29,29 @@ class BabyController extends Controller
             'tgl_lahir' => 'required',
         ]);
 
-        $data['user_id'] = $request->user()->id;
+        $user = $request->user();
+
+        $data['user_id'] = $user->id;
 
         Baby::create($data);
 
-        return $this->success();
+        $babies = Baby::where('user_id', $user->id)->get();
+
+        return $this->success([
+            'babies' => BabyResource::collection($babies),
+        ]);
     }
 
-    public function destroy(Baby $baby): JsonResponse
+    public function destroy(Request $request, Baby $baby): JsonResponse
     {
         $baby->delete();
 
-        return $this->success();
+        $user = $request->user();
+
+        $babies = Baby::where('user_id', $user->id)->get();
+
+        return $this->success([
+            'babies' => BabyResource::collection($babies),
+        ]);
     }
 }

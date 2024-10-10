@@ -13,14 +13,14 @@ class Laktasi extends Model
     protected $table = 'laktasi';
 
     protected $fillable = [
-        'user_id',
+        'baby_id',
         'mulai',
         'selesai',
         'posisi'
     ];
 
-    public function user(): BelongsTo
+    public function baby(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Baby::class, 'baby_id');
     }
 }

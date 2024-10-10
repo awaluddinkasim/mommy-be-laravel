@@ -5,7 +5,7 @@
 </a>
 
 <x-component.modal id="form-modal" title="{{ $title }}">
-    <form action="{{ $action }}" method="post">
+    <form action="{{ $action }}" method="post" autocomplete="off">
         @csrf
         <div class="modal-body">
             {{ $slot }}

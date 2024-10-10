@@ -13,5 +13,11 @@ class NutrisiHarian extends Model
         'user_id',
         'makanan_id',
         'sesi',
+        'tanggal'
     ];
+
+    public function makanan()
+    {
+        return $this->belongsTo(Makanan::class, 'makanan_id');
+    }
 }

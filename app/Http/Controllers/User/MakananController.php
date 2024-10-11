@@ -15,7 +15,7 @@ class MakananController extends Controller
         $makanan = MakananResource::collection(Makanan::all());
 
         return $this->success([
-            'makanan' => MakananResource::collection(Makanan::all()),
+            'makanan' => $makanan,
         ]);
     }
 }

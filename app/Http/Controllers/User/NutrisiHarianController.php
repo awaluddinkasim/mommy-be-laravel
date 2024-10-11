@@ -12,6 +12,8 @@ class NutrisiHarianController extends Controller
 {
     public function get(Request $request): JsonResponse
     {
+        if (!$request->get('tanggal')) return $this->error('Parameter tanggal tidak boleh kosong');
+
         $user = $request->user();
 
         $tanggal = $request->get('tanggal', date('Y-m-d'));

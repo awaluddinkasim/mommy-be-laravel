@@ -16,7 +16,7 @@ class NutrisiHarianController extends Controller
 
         $user = $request->user();
 
-        $tanggal = $request->get('tanggal', date('Y-m-d'));
+        $tanggal = $request->get('tanggal');
 
         $nutrisiHarian = NutrisiHarian::where('user_id', $user->id)
             ->whereDate('created_at', $tanggal)->get();

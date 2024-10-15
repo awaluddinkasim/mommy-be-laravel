@@ -19,7 +19,7 @@ class NutrisiHarianController extends Controller
         $tanggal = $request->get('tanggal');
 
         $nutrisiHarian = NutrisiHarian::where('user_id', $user->id)
-            ->whereDate('created_at', $tanggal)->get();
+            ->whereDate('tanggal', $tanggal)->get();
 
         return $this->success([
             'nutrisiHarian' => NutrisiHarianResource::collection($nutrisiHarian)
@@ -34,9 +34,15 @@ class NutrisiHarianController extends Controller
         ]);
 
         $data['user_id'] = $request->user()->id;
+        $data['tanggal'] = now();
 
         NutrisiHarian::create($data);
 
-        return $this->success();
+        $nutrisiHarian = NutrisiHarian::where('user_id', $data['user_id'])
+            ->whereDate('tanggal', now())->get();
+
+        return $this->success([
+            'nutrisiHarian' => NutrisiHarianResource::collection($nutrisiHarian)
+        ]);
     }
 }

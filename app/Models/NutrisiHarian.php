@@ -9,6 +9,8 @@ class NutrisiHarian extends Model
 {
     use HasFactory;
 
+    protected $table = 'nutrisi_harian';
+
     protected $fillable = [
         'user_id',
         'makanan_id',

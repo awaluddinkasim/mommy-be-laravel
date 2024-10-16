@@ -13,7 +13,7 @@ class ObstetriController extends Controller
     public function get()
     {
         return $this->success([
-            'obstetri' => Obstetri::all(),
+            'daftarObstetri' => Obstetri::all(),
         ]);
     }
 
@@ -27,6 +27,10 @@ class ObstetriController extends Controller
             'jarak_kelahiran' => 'required',
         ]);
 
+        $user = $request->user();
+
+        $data['user_id'] = $user->id;
+
         $calculator =  new ObstetricRiskCalculator();
         $data['resiko'] = $calculator->calculateRisk(
             $data['kehamilan'],
@@ -34,11 +38,11 @@ class ObstetriController extends Controller
             $data['riwayat_abortus'],
             $data['metode_persalinan'],
             $data['jarak_kelahiran']
-        );
+        )['riskCategory'];
 
         Obstetri::create($data);
 
-        $daftarObstetri = Obstetri::where('user_id', $request->user()->id)->get();
+        $daftarObstetri = Obstetri::where('user_id', $user->id)->get();
 
         return $this->success([
             'daftarObstetri' => ObstetriResource::collection($daftarObstetri),

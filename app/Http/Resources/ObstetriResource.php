@@ -15,6 +15,7 @@ class ObstetriResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'kehamilan' => $this->kehamilan,
             'persalinan' => $this->persalinan,
             'riwayat_abortus' => $this->riwayat_abortus,

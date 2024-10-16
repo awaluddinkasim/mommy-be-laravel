@@ -9,7 +9,7 @@ class Obstetri extends Model
 {
     use HasFactory;
 
-    protected $table = 'obsteri';
+    protected $table = 'obstetri';
 
     protected $fillable = [
         'user_id',

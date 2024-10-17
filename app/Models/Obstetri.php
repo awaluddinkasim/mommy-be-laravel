@@ -19,10 +19,11 @@ class Obstetri extends Model
         'metode_persalinan',
         'jarak_kelahiran',
         'resiko',
+        'score_resiko'
     ];
 
     public function statusGizi()
     {
-        return $this->hasOne(StatusGizi::class, 'obsteri_id');
+        return $this->hasOne(StatusGizi::class, 'obstetri_id');
     }
 }

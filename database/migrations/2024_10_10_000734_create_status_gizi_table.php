@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('status_gizi', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('obsteri_id')->constrained('obsteri')->cascadeOnDelete();
+            $table->foreignId('obstetri_id')->constrained('obstetri')->cascadeOnDelete();
             $table->double('tinggi_badan');
             $table->double('bb_sebelum_hamil');
             $table->double('bb_saat_hamil');

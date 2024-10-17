@@ -6,7 +6,7 @@
         <x-form.input name="porsi" label="Jumlah Porsi" :required="true" />
     </x-form.modal>
 
-    <div class="row row-cards">
+    <div class="row row-cards mt-4">
         @foreach ($foods as $food)
             <div class="col-md-6 col-lg-3">
                 <div class="card">
@@ -14,10 +14,10 @@
                         <span class="avatar avatar-xl mb-3 rounded"
                             style="background-image: url('{{ asset('static/food.jpg') }}')"></span>
                         <h3 class="m-0 mb-1">{{ $food->nama }}</h3>
-                        <div class="text-secondary">{{ $food->kalori }} kcal</div>
-                        <div class="text-secondary">Porsi {{ $food->porsi }}</div>
+                        <div class="text-secondary">{{ $food->kalori }} kkal</div>
+                        <div class="text-secondary">{{ $food->porsi }} porsi</div>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer text-center">
                         <form action="{{ route('makanan.destroy', $food->id) }}" method="post">
                             @method('DELETE')
                             @csrf

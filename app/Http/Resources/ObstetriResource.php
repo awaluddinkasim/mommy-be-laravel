@@ -19,7 +19,7 @@ class ObstetriResource extends JsonResource
             'kehamilan' => $this->kehamilan,
             'persalinan' => $this->persalinan,
             'riwayat_abortus' => $this->riwayat_abortus,
-            'metode_persalinan' => $this->metode_persalinan,
+            'metode_persalinan' => ucfirst($this->metode_persalinan),
             'jarak_kelahiran' => $this->jarak_kelahiran,
             'resiko' => $this->resiko
         ];

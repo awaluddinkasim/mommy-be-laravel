@@ -12,7 +12,7 @@ class StatusGizi extends Model
     protected $table = 'status_gizi';
 
     protected $fillable = [
-        'obsteri_id',
+        'obstetri_id',
         'tinggi_badan',
         'bb_sebelum_hamil',
         'bb_saat_hamil',

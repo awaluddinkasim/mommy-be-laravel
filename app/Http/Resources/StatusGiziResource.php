@@ -19,9 +19,9 @@ class StatusGiziResource extends JsonResource
             'bb_sebelum_hamil' => $this->bb_sebelum_hamil,
             'bb_saat_hamil' => $this->bb_saat_hamil,
             'bb_setelah_melahirkan' => $this->bb_setelah_melahirkan,
-            'aktifitas_harian' => $this->aktifitas_harian,
+            'aktifitas_harian' => ucfirst($this->aktifitas_harian),
             'imt_pra_hamil' => $this->imt_pra_hamil,
-            'img_post_hamil' => $this->img_post_hamil,
+            'imt_post_hamil' => $this->imt_post_hamil,
             'resistensi_bb' => $this->resistensi_bb,
             'kebutuhan_kalori' => $this->kebutuhan_kalori
         ];

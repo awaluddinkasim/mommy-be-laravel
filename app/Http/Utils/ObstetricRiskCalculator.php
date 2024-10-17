@@ -38,8 +38,10 @@ class ObstetricRiskCalculator
         }
 
         // Hitung skor berdasarkan jarak kelahiran sebelumnya
-        if ($previousBirthInterval < 2 || $previousBirthInterval > 10) {
-            $score += 4;
+        if ($deliveryNumber > 1) {
+            if ($previousBirthInterval < 2 || $previousBirthInterval > 10) {
+                $score += 4;
+            }
         }
 
         // Tentukan kategori risiko
@@ -53,12 +55,11 @@ class ObstetricRiskCalculator
 
     private function determineRiskCategory(int $score): string
     {
-        if ($score <= 2) {
-            return 'Kehamilan Risiko Rendah (KRR)';
-        } elseif ($score >= 6 && $score <= 10) {
+        if ($score >= 6 && $score <= 10) {
             return 'Kehamilan Risiko Tinggi (KRT)';
-        } else {
+        } elseif ($score > 10) {
             return 'Kehamilan Risiko Sangat Tinggi (KRST)';
         }
+        return 'Kehamilan Risiko Rendah (KRR)';
     }
 }

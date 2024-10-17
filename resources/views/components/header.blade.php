@@ -16,7 +16,7 @@
                     <span class="avatar avatar-sm"
                         style="background-image: url({{ asset('static/avatar.png') }})"></span>
                     <div class="d-none d-xl-block ps-2">
-                        <div>Nama User</div>
+                        <div>{{ auth()->user()->nama }}</div>
                         <div class="mt-1 small text-secondary">Admin</div>
                     </div>
                 </a>

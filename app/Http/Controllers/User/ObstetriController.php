@@ -10,10 +10,12 @@ use Illuminate\Http\Request;
 
 class ObstetriController extends Controller
 {
-    public function get()
+    public function get(Request $request)
     {
+        $daftarObstetri = Obstetri::where('user_id', $request->user()->id)->get();
+
         return $this->success([
-            'daftarObstetri' => Obstetri::all(),
+            'daftarObstetri' => ObstetriResource::collection($daftarObstetri),
         ]);
     }
 
@@ -32,13 +34,16 @@ class ObstetriController extends Controller
         $data['user_id'] = $user->id;
 
         $calculator =  new ObstetricRiskCalculator();
-        $data['resiko'] = $calculator->calculateRisk(
+        $resiko = $calculator->calculateRisk(
             $data['kehamilan'],
             $data['persalinan'],
             $data['riwayat_abortus'],
             $data['metode_persalinan'],
             $data['jarak_kelahiran']
-        )['riskCategory'];
+        );
+
+        $data['resiko'] = $resiko['riskCategory'];
+        $data['score_resiko'] = $resiko['score'];
 
         Obstetri::create($data);
 

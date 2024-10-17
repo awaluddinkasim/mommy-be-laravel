@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('metode_persalinan');
             $table->integer('jarak_kelahiran');
             $table->string('resiko');
+            $table->integer('score_resiko');
             $table->timestamps();
         });
     }

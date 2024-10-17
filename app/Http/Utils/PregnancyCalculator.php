@@ -6,17 +6,21 @@ class PregnancyCalculator
 {
     public function hitungIMTPraHamil(float $weight, float $height): float
     {
-        return $weight / ($height * $height);
+        // Konversi tinggi dari cm ke meter untuk perhitungan IMT
+        $heightInMeters = $height / 100;
+        return round($weight / ($heightInMeters * $heightInMeters), 2);
     }
 
     public function hitungIMTPostHamil(float $postWeight, float $height): float
     {
-        return $postWeight / ($height * $height);
+        // Konversi tinggi dari cm ke meter untuk perhitungan IMT
+        $heightInMeters = $height / 100;
+        return round($postWeight / ($heightInMeters * $heightInMeters), 2);
     }
 
     public function hitungResistensiBeratBadan(float $pregnancyWeight, float $prePregnancyWeight): float
     {
-        return $pregnancyWeight - $prePregnancyWeight;
+        return round($pregnancyWeight - $prePregnancyWeight, 2);
     }
 
     public function hitungKebutuhanKalori(
@@ -33,7 +37,7 @@ class PregnancyCalculator
 
     private function hitungBMR(float $weight, float $height, int $age): float
     {
-        return 655.1 + (9.563 * $weight) + (1.850 * ($height * 100)) - (4.676 * $age);
+        return 655.1 + (9.563 * $weight) + (1.850 * $height) - (4.676 * $age);
     }
 
     private function hitungTEE(float $bmr, string $activityLevel): float

@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 
     Route::get('/laktasi/{baby}', [LaktasiController::class, 'get']);
     Route::post('/laktasi', [LaktasiController::class, 'store']);
+    Route::get('/laktasi/{baby}/charts', [LaktasiController::class, 'charts']);
 
     Route::get('/obstetri', [ObstetriController::class, 'get']);
     Route::post('/obstetri', [ObstetriController::class, 'store']);

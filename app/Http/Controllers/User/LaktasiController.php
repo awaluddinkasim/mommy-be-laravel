@@ -41,4 +41,33 @@ class LaktasiController extends Controller
 
         return $this->success();
     }
+
+
+    public function charts(Baby $baby, Request $request): JsonResponse
+    {
+        if (!$request->get('tanggal')) return $this->error('Parameter tanggal tidak boleh kosong');
+
+        $tanggal = $request->get('tanggal');
+
+        $riwayatLaktasi = Laktasi::where('baby_id', $baby->id)
+            ->whereDate('created_at', $tanggal)->get()->groupBy('posisi');
+
+        $kiri = [];
+        $kanan = [];
+
+        foreach ($riwayatLaktasi as $key => $value) {
+            if ($key == 'Kiri') {
+                $kiri = $value;
+            }
+
+            if ($key == 'Kanan') {
+                $kanan = $value;
+            }
+        }
+
+        return $this->success([
+            'kiri' => LaktasiResource::collection($kiri),
+            'kanan' => LaktasiResource::collection($kanan),
+        ]);
+    }
 }

@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 
     Route::get('/status-gizi/{obstetri}', [StatusGiziController::class, 'get']);
     Route::post('/status-gizi/{obstetri}', [StatusGiziController::class, 'store']);
+    Route::put('/status-gizi/{status_gizi}', [StatusGiziController::class, 'update']);
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });

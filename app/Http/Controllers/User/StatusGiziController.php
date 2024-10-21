@@ -50,4 +50,26 @@ class StatusGiziController extends Controller
             'statusGizi' => new StatusGiziResource($obstetri->statusGizi),
         ]);
     }
+
+    public function update(Request $request, StatusGizi $statusGizi)
+    {
+        $data = $request->validate([
+            'tinggi_badan' => 'required',
+            'bb_sebelum_hamil' => 'required',
+            'bb_saat_hamil' => 'required',
+            'bb_setelah_melahirkan' => 'required',
+            'aktifitas_harian' => 'required',
+        ]);
+
+        $data['imt_pra_hamil'] = $this->pregnancyCalculator->hitungIMTPraHamil($data['bb_sebelum_hamil'], $data['tinggi_badan']);
+        $data['imt_post_hamil'] = $this->pregnancyCalculator->hitungIMTPostHamil($data['bb_setelah_melahirkan'], $data['tinggi_badan']);
+        $data['resistensi_bb'] = $this->pregnancyCalculator->hitungResistensiBeratBadan($data['bb_saat_hamil'], $data['bb_sebelum_hamil']);
+        $data['kebutuhan_kalori'] = $this->pregnancyCalculator->hitungKebutuhanKalori($data['bb_sebelum_hamil'], $data['tinggi_badan'], $request->user()->usia, $data['aktifitas_harian']);
+
+        $statusGizi->update($data);
+
+        return $this->success([
+            'statusGizi' => new StatusGiziResource($statusGizi),
+        ]);
+    }
 }

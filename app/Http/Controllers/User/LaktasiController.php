@@ -6,6 +6,7 @@ use App\Models\Laktasi;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\LaktasiGrafikResource;
 use App\Http\Resources\LaktasiResource;
 use App\Models\Baby;
 use Carbon\Carbon;
@@ -66,8 +67,8 @@ class LaktasiController extends Controller
         }
 
         return $this->success([
-            'kiri' => LaktasiResource::collection($kiri),
-            'kanan' => LaktasiResource::collection($kanan),
+            'kiri' => LaktasiGrafikResource::collection($kiri),
+            'kanan' => LaktasiGrafikResource::collection($kanan),
         ]);
     }
 }

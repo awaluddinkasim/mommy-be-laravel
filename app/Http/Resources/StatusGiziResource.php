@@ -15,6 +15,7 @@ class StatusGiziResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'tinggi_badan' => $this->tinggi_badan,
             'bb_sebelum_hamil' => $this->bb_sebelum_hamil,
             'bb_saat_hamil' => $this->bb_saat_hamil,
@@ -23,7 +24,7 @@ class StatusGiziResource extends JsonResource
             'imt_pra_hamil' => $this->imt_pra_hamil,
             'imt_post_hamil' => $this->imt_post_hamil,
             'resistensi_bb' => $this->resistensi_bb,
-            'kebutuhan_kalori' => $this->kebutuhan_kalori
+            'kebutuhan_kalori' => round($this->kebutuhan_kalori, 2),
         ];
     }
 }

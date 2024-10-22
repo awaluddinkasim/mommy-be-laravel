@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class LaktasiResource extends JsonResource
+class LaktasiGrafikResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,11 +16,8 @@ class LaktasiResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'mulai' => $this->mulai,
-            'selesai' => $this->selesai,
-            'pukul' => $this->mulai,
-            'durasi' => getDurationString($this->mulai, $this->selesai),
-            'posisi' => $this->posisi,
+            'id' => $this->id,
+            'durasi' => round(Carbon::parse($this->mulai)->diffInMinutes($this->selesai), 2),
         ];
     }
 }

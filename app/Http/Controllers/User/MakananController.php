@@ -12,7 +12,7 @@ class MakananController extends Controller
 {
     public function get(): JsonResponse
     {
-        $makanan = MakananResource::collection(Makanan::all());
+        $makanan = MakananResource::collection(Makanan::orderBy('nama')->get());
 
         return $this->success([
             'makanan' => $makanan,

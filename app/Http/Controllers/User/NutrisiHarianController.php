@@ -21,8 +21,11 @@ class NutrisiHarianController extends Controller
         $nutrisiHarian = NutrisiHarian::where('user_id', $user->id)
             ->whereDate('tanggal', $tanggal)->get();
 
+        $kebutuhanKalori = $user->obstetri->last()->statusGizi->kebutuhan_kalori;
+
         return $this->success([
-            'nutrisiHarian' => NutrisiHarianResource::collection($nutrisiHarian)
+            'nutrisiHarian' => NutrisiHarianResource::collection($nutrisiHarian),
+            'kebutuhanKalori' => round($kebutuhanKalori, 2)
         ]);
     }
 
@@ -33,7 +36,9 @@ class NutrisiHarianController extends Controller
             'sesi' => 'required',
         ]);
 
-        $data['user_id'] = $request->user()->id;
+        $user = $request->user();
+
+        $data['user_id'] = $user->id;
         $data['tanggal'] = now();
 
         NutrisiHarian::create($data);
@@ -41,8 +46,12 @@ class NutrisiHarianController extends Controller
         $nutrisiHarian = NutrisiHarian::where('user_id', $data['user_id'])
             ->whereDate('tanggal', now())->get();
 
+
+        $kebutuhanKalori = $user->obstetri->last()->statusGizi->kebutuhan_kalori;
+
         return $this->success([
-            'nutrisiHarian' => NutrisiHarianResource::collection($nutrisiHarian)
+            'nutrisiHarian' => NutrisiHarianResource::collection($nutrisiHarian),
+            'kebutuhanKalori' => round($kebutuhanKalori, 2)
         ]);
     }
 }

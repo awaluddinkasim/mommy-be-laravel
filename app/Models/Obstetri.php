@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Obstetri extends Model
 {
@@ -22,7 +23,7 @@ class Obstetri extends Model
         'score_resiko'
     ];
 
-    public function statusGizi()
+    public function statusGizi(): HasOne
     {
         return $this->hasOne(StatusGizi::class, 'obstetri_id');
     }

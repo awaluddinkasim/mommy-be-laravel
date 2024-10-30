@@ -9,6 +9,8 @@ class PPDScreening extends Model
 {
     use HasFactory;
 
+    protected $table = 'ppd_screenings';
+
     protected $fillable = [
         'user_id',
         'q1',

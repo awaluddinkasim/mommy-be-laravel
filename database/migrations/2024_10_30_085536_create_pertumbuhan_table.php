@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('baby_id')->constrained('babies')->cascadeOnDelete();
             $table->date('tanggal');
             $table->double('berat_badan');
-            $table->double('tinggi_badan');
+            $table->double('panjang_badan');
             $table->timestamps();
         });
     }

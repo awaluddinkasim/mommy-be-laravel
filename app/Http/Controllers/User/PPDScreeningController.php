@@ -14,7 +14,7 @@ class PPDScreeningController extends Controller
     {
         $user = $request->user();
 
-        $this->success([
+        return $this->success([
             'ppdScreening' => $user->ppdScreening ? new PPDScreeningResource($user->ppdScreening) : null,
         ]);
     }
@@ -43,13 +43,14 @@ class PPDScreeningController extends Controller
         $calculator = new PPDScreeningCalculator();
         $result = $calculator->calculate($data);
 
+        $data['user_id'] = $user->id;
         $data['total_score'] = $result['total_score'];
         $data['tingkat_risiko'] = $result['tingkat_risiko'];
         $data['pesan'] = $result['pesan'];
 
         PPDScreening::create($data);
 
-        $this->success([
+        return $this->success([
             'ppdScreening' => new PPDScreeningResource($user->ppdScreening),
         ]);
     }

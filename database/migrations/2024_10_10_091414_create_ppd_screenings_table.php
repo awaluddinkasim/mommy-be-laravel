@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('q9');
             $table->integer('q10');
             $table->integer('total_score');
-            $table->integer('tingkat_risiko');
+            $table->string('tingkat_risiko');
             $table->text('pesan');
             $table->timestamps();
         });

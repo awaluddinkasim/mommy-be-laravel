@@ -14,6 +14,7 @@ use App\Http\Controllers\User\MakananController;
 use App\Http\Controllers\User\ObstetriController;
 use App\Http\Controllers\User\StatusGiziController;
 use App\Http\Controllers\User\NutrisiHarianController;
+use App\Http\Controllers\User\PPDScreeningController;
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
@@ -59,6 +60,9 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::get('/status-gizi/{obstetri}', [StatusGiziController::class, 'get']);
     Route::post('/status-gizi/{obstetri}', [StatusGiziController::class, 'store']);
     Route::put('/status-gizi/{status_gizi}', [StatusGiziController::class, 'update']);
+
+    Route::get('/screening-ppd', [PPDScreeningController::class, 'get']);
+    Route::post('/screening-ppd', [PPDScreeningController::class, 'store']);
 
     Route::put('/user', [UserController::class, 'update']);
 

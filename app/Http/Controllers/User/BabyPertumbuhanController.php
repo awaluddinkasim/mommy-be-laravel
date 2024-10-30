@@ -26,7 +26,7 @@ class BabyPertumbuhanController extends Controller
         $request->validate([
             'tanggal' => 'required',
             'berat_badan' => 'required',
-            'tinggi_badan' => 'required',
+            'panjang_badan' => 'required',
         ]);
 
         $data['baby_id'] = $baby->id;

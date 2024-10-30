@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('ppd_screenings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->integer('q1');
+            $table->integer('q2');
+            $table->integer('q3');
+            $table->integer('q4');
+            $table->integer('q5');
+            $table->integer('q6');
+            $table->integer('q7');
+            $table->integer('q8');
+            $table->integer('q9');
+            $table->integer('q10');
+            $table->integer('total_score');
+            $table->integer('tingkat_risiko');
+            $table->text('pesan');
             $table->timestamps();
         });
     }

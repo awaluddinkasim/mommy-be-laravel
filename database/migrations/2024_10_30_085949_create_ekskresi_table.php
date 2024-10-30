@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('ekskresi', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('baby_id')->constrained('babies')->cascadeOnDelete();
+            $table->date('tanggal');
+            $table->string('ekskresi');
             $table->timestamps();
         });
     }

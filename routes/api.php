@@ -5,7 +5,7 @@ use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\BabyController;
-use App\Http\Controllers\User\BabyEkstresiController;
+use App\Http\Controllers\User\BabyEkskresiController;
 use App\Http\Controllers\User\BabyMonitorTidurController;
 use App\Http\Controllers\User\BabyPertumbuhanController;
 use App\Http\Controllers\User\UserController;
@@ -32,12 +32,15 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::group(['prefix' => 'baby/{baby}'], function () {
         Route::get('/monitor-tidur', [BabyMonitorTidurController::class, 'get']);
         Route::post('/monitor-tidur', [BabyMonitorTidurController::class, 'store']);
+        Route::delete('/monitor-tidur/{monitor_tidur}', [BabyMonitorTidurController::class, 'destroy']);
 
-        Route::get('/ekskresi', [BabyEkstresiController::class, 'get']);
-        Route::post('/ekskresi', [BabyEkstresiController::class, 'store']);
+        Route::get('/ekskresi', [BabyEkskresiController::class, 'get']);
+        Route::post('/ekskresi', [BabyEkskresiController::class, 'store']);
+        Route::delete('/ekskresi/{ekskresi}', [BabyEkskresiController::class, 'destroy']);
 
         Route::get('/pertumbuhan', [BabyPertumbuhanController::class, 'get']);
         Route::post('/pertumbuhan', [BabyPertumbuhanController::class, 'store']);
+        Route::delete('/pertumbuhan/{pertumbuhan}', [BabyPertumbuhanController::class, 'destroy']);
     });
 
     Route::get('/makanan', [MakananController::class, 'get']);

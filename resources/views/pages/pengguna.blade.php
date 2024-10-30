@@ -8,7 +8,7 @@
                         <th>Email</th>
                         <th>Nama</th>
                         <th>Tanggal Lahir</th>
-                        <th>Umur</th>
+                        <th>Usia</th>
                         <th>No. HP</th>
                         <th></th>
                     </tr>
@@ -19,8 +19,8 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->nama }}</td>
-                            <td>{{ Carbon\Carbon::parse($user->tanggal_lahir)->isoFormat('DD MMMM YYYY') }}</td>
-                            <td>{{ $user->usia }}</td>
+                            <td>{{ Carbon\Carbon::parse($user->tgl_lahir)->isoFormat('DD MMMM YYYY') }}</td>
+                            <td>{{ $user->usia }} Tahun</td>
                             <td>{{ $user->no_hp }}</td>
                             <td>
                                 <a href="{{ route('pengguna.edit', $user->id) }}" class="btn btn-sm btn-primary">Edit</a>

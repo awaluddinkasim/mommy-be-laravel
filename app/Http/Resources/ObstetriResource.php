@@ -21,7 +21,8 @@ class ObstetriResource extends JsonResource
             'riwayat_abortus' => $this->riwayat_abortus,
             'metode_persalinan' => ucfirst($this->metode_persalinan),
             'jarak_kelahiran' => $this->jarak_kelahiran,
-            'resiko' => $this->resiko
+            'resiko' => $this->resiko,
+            'pesan' => $this->pesan
         ];
     }
 }

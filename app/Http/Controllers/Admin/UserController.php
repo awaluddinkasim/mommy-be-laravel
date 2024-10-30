@@ -47,6 +47,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('pengguna');
+        return $this->back('success', 'Data pengguna berhasil dihapus');
     }
 }

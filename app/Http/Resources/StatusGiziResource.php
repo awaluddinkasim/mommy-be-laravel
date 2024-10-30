@@ -25,6 +25,7 @@ class StatusGiziResource extends JsonResource
             'imt_post_hamil' => $this->imt_post_hamil,
             'resistensi_bb' => $this->resistensi_bb,
             'kebutuhan_kalori' => round($this->kebutuhan_kalori, 2),
+            'pesan' => $this->pesan
         ];
     }
 }

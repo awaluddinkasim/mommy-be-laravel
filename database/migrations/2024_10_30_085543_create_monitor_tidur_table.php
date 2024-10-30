@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('monitor_tidur', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('baby_id')->constrained('babies')->cascadeOnDelete();
+            $table->date('tanggal');
+            $table->timestamp('tidur');
+            $table->timestamp('bangun');
             $table->timestamps();
         });
     }

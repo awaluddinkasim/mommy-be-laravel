@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pertumbuhan', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('baby_id')->constrained('babies')->cascadeOnDelete();
+            $table->date('tanggal');
+            $table->double('berat_badan');
+            $table->double('tinggi_badan');
             $table->timestamps();
         });
     }

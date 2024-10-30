@@ -28,6 +28,7 @@ class User extends Authenticatable
         'password',
         'tgl_lahir',
         'no_hp',
+        'fcm_token'
     ];
 
     protected $appends = ['usia'];

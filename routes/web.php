@@ -18,9 +18,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('/makanan/{makanan}', [MakananController::class, 'destroy'])->name('makanan.destroy');
 
     Route::get('/pengguna', [UserController::class, 'index'])->name('pengguna');
-    Route::get('/pengguna/{pengguna}', [UserController::class, 'edit'])->name('pengguna.edit');
-    Route::put('/pengguna/{pengguna}', [UserController::class, 'update'])->name('pengguna.update');
-    Route::delete('/pengguna/{pengguna}', [UserController::class, 'destroy'])->name('pengguna.destroy');
+    Route::get('/pengguna/{user}', [UserController::class, 'edit'])->name('pengguna.edit');
+    Route::put('/pengguna/{user}', [UserController::class, 'update'])->name('pengguna.update');
+    Route::delete('/pengguna/{user}', [UserController::class, 'destroy'])->name('pengguna.destroy');
 
     Route::get('/notifikasi', [NotifikasiController::class, 'index'])->name('notifikasi');
     Route::delete('/notifikasi/{notifikasi}', [NotifikasiController::class, 'destroy'])->name('notifikasi.destroy');

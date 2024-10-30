@@ -24,6 +24,7 @@
             font-feature-settings: "cv03", "cv04", "cv11";
         }
     </style>
+    @stack('styles')
 </head>
 
 <body>
@@ -71,6 +72,8 @@
     <!-- Tabler Core -->
     <script src="{{ asset('assets/js/tabler.min.js?1692870487') }}" defer></script>
     <script src="{{ asset('assets/js/demo.min.js?1692870487') }}" defer></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>

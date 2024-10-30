@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\BabyMonitorTidurResource;
 use App\Models\Baby;
 use App\Models\MonitorTidur;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class BabyMonitorTidurController extends Controller
             ->whereDate('tanggal', $request->get('tanggal'))->get();
 
         return $this->success([
-            'monitorTidur' => $daftarMonitorTidur,
+            'monitorTidur' => BabyMonitorTidurResource::collection($daftarMonitorTidur),
         ]);
     }
 
@@ -37,7 +38,7 @@ class BabyMonitorTidurController extends Controller
             ->whereDate('tanggal', $request->get('tanggal'))->get();
 
         return $this->success([
-            'monitorTidur' => $daftarMonitorTidur,
+            'monitorTidur' => BabyMonitorTidurResource::collection($daftarMonitorTidur),
         ]);
     }
 
@@ -49,7 +50,7 @@ class BabyMonitorTidurController extends Controller
             ->whereDate('tanggal', $request->get('tanggal'))->get();
 
         return $this->success([
-            'monitorTidur' => $daftarMonitorTidur,
+            'monitorTidur' => BabyMonitorTidurResource::collection($daftarMonitorTidur),
         ]);
     }
 }

@@ -6,6 +6,7 @@ use App\Models\Baby;
 use App\Models\Pertumbuhan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\BabyPertumbuhanResource;
 
 class BabyPertumbuhanController extends Controller
 {
@@ -17,7 +18,7 @@ class BabyPertumbuhanController extends Controller
             ->whereDate('created_at', $request->get('tanggal'))->get();
 
         return $this->success([
-            'pertumbuhan' => $daftarPertumbuhan,
+            'pertumbuhan' => BabyPertumbuhanResource::collection($daftarPertumbuhan,)
         ]);
     }
 
@@ -37,7 +38,7 @@ class BabyPertumbuhanController extends Controller
             ->whereDate('created_at', $request->get('tanggal'))->get();
 
         return $this->success([
-            'pertumbuhan' => $daftarPertumbuhan,
+            'pertumbuhan' => BabyPertumbuhanResource::collection($daftarPertumbuhan,)
         ]);
     }
 
@@ -49,7 +50,7 @@ class BabyPertumbuhanController extends Controller
             ->whereDate('created_at', $request->get('tanggal'))->get();
 
         return $this->success([
-            'pertumbuhan' => $daftarPertumbuhan,
+            'pertumbuhan' => BabyPertumbuhanResource::collection($daftarPertumbuhan,)
         ]);
     }
 }

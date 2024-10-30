@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
 use App\Models\Baby;
 use App\Models\Ekskresi;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\BabyEkskresiResource;
 
 class BabyEkskresiController extends Controller
 {
@@ -17,7 +18,7 @@ class BabyEkskresiController extends Controller
             ->whereDate('tanggal', $request->get('tanggal'))->get();
 
         return $this->success([
-            'ekskresi' => $daftarEkskresi,
+            'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),
         ]);
     }
 
@@ -35,7 +36,7 @@ class BabyEkskresiController extends Controller
             ->whereDate('tanggal', $request->get('tanggal'))->get();
 
         return $this->success([
-            'ekskresi' => $daftarEkskresi,
+            'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),
         ]);
     }
 
@@ -47,7 +48,7 @@ class BabyEkskresiController extends Controller
             ->whereDate('tanggal', $request->get('tanggal'))->get();
 
         return $this->success([
-            'ekskresi' => $daftarEkskresi,
+            'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),
         ]);
     }
 }

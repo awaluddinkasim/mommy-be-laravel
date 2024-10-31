@@ -41,11 +41,11 @@ class Obstetri extends Model
         $usia = Carbon::parse($this->user->tgl_lahir)->diffInYears(Carbon::parse($this->created_at));
 
         if ($usia > 35) {
-            $pesan = "Kehamilan di usia di atas 35 tahun membawa risiko obstetri yang lebih tinggi, seperti hipertensi, diabetes gestasional, dan komplikasi persalinan. Sangat penting untuk melakukan pemantauan kesehatan secara rutin dan menjaga gaya hidup sehat, termasuk pola makan seimbang dan olahraga ringan. Diskusikan dengan dokter Anda tentang perencanaan persalinan, serta pemeriksaan rutin untuk memastikan pemulihan pascapersalinan yang optimal.";
+            $pesan = "Usia $usia Tahun, kehamilan di usia di atas 35 tahun membawa risiko obstetri yang lebih tinggi, seperti hipertensi, diabetes gestasional, dan komplikasi persalinan. Sangat penting untuk melakukan pemantauan kesehatan secara rutin dan menjaga gaya hidup sehat, termasuk pola makan seimbang dan olahraga ringan. Diskusikan dengan dokter Anda tentang perencanaan persalinan, serta pemeriksaan rutin untuk memastikan pemulihan pascapersalinan yang optimal.";
         } elseif ($usia >= 20) {
-            $pesan = "Anda berada dalam rentang usia yang optimal untuk kehamilan, dengan risiko obstetri yang lebih rendah. Tetap penting untuk menjaga kesehatan dengan pola makan yang seimbang, olahraga ringan, dan cukup istirahat. Lakukan pemeriksaan kesehatan secara rutin untuk memantau kondisi Anda pascapersalinan dan memastikan pemulihan yang baik serta kesehatan bayi Anda.";
+            $pesan = "Usia $usia Tahun, Anda berada dalam rentang usia yang optimal untuk kehamilan, dengan risiko obstetri yang lebih rendah. Tetap penting untuk menjaga kesehatan dengan pola makan yang seimbang, olahraga ringan, dan cukup istirahat. Lakukan pemeriksaan kesehatan secara rutin untuk memantau kondisi Anda pascapersalinan dan memastikan pemulihan yang baik serta kesehatan bayi Anda.";
         } else {
-            $pesan = "Kehamilan pada usia remaja meningkatkan risiko kekurangan gizi, anemia, dan kelahiran prematur. Pastikan Anda mendapatkan dukungan nutrisi yang memadai dan melakukan pemantauan kesehatan secara rutin untuk mencegah komplikasi lebih lanjut. Konsumsi makanan yang kaya zat besi, kalsium, dan protein sangat penting untuk membantu pemulihan dan menjaga kesehatan Anda serta bayi.";
+            $pesan = "Usia $usia Tahun, kehamilan pada usia remaja meningkatkan risiko kekurangan gizi, anemia, dan kelahiran prematur. Pastikan Anda mendapatkan dukungan nutrisi yang memadai dan melakukan pemantauan kesehatan secara rutin untuk mencegah komplikasi lebih lanjut. Konsumsi makanan yang kaya zat besi, kalsium, dan protein sangat penting untuk membantu pemulihan dan menjaga kesehatan Anda serta bayi.";
         }
 
         return Attribute::make(

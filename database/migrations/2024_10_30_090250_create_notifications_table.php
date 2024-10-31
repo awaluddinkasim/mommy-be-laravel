@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+            $table->integer('month_number');
+            $table->integer('week_number');
+            $table->time('scheduled_time');
+            $table->string('title');
+            $table->text('message');
             $table->timestamps();
         });
     }

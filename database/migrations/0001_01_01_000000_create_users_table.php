@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tgl_lahir');
             $table->string('no_hp');
             $table->rememberToken();
+            $table->string('fcm_token')->nullable();
             $table->timestamps();
         });
 

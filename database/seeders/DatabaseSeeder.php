@@ -24,5 +24,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call(MakananSeeder::class);
+        $this->call(NotificationSeeder::class);
     }
 }

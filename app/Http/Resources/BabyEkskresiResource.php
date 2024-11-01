@@ -15,8 +15,10 @@ class BabyEkskresiResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'tanggal' => $this->tanggal,
-            'ekskresi' => $this->ekskresi
+            'ekskresi' => $this->ekskresi,
+            'pukul' => $this->pukul
         ];
     }
 }

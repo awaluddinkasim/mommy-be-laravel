@@ -15,9 +15,11 @@ class BabyMonitorTidurResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'tanggal' => $this->tanggal,
             'tidur' => $this->tidur,
-            'bangun' => $this->bangun
+            'bangun' => $this->bangun,
+            'durasi_tidur' => getDurationString($this->tidur, $this->bangun),
         ];
     }
 }

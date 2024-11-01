@@ -15,6 +15,7 @@ class BabyPertumbuhanResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'tanggal' => $this->tanggal,
             'berat_badan' => $this->berat_badan,
             'panjang_badan' => $this->panjang_badan,

@@ -27,13 +27,29 @@ class BabyEkskresiController extends Controller
         $data = $request->validate([
             'tanggal' => 'required',
             'ekskresi' => 'required',
+            'pukul' => 'required',
         ]);
 
-        $data['baby_id'] = $baby->id;
-        Ekskresi::create($data);
+        if ($data['ekskresi'] == 'Keduanya') {
+            Ekskresi::insert([
+                [
+                    'baby_id' => $baby->id,
+                    'ekskresi' => 'BAK',
+                    'pukul' => $data['pukul']
+                ],
+                [
+                    'baby_id' => $baby->id,
+                    'ekskresi' => 'BAB',
+                    'pukul' => $data['pukul']
+                ]
+            ]);
+        } else {
+            $data['baby_id'] = $baby->id;
+            Ekskresi::create($data);
+        }
 
         $daftarEkskresi = Ekskresi::where('baby_id', $baby->id)
-            ->whereDate('tanggal', $request->get('tanggal'))->get();
+            ->whereDate('tanggal', today())->get();
 
         return $this->success([
             'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),
@@ -45,7 +61,7 @@ class BabyEkskresiController extends Controller
         $ekskresi->delete();
 
         $daftarEkskresi = Ekskresi::where('baby_id', $baby->id)
-            ->whereDate('tanggal', $request->get('tanggal'))->get();
+            ->whereDate('tanggal', today())->get();
 
         return $this->success([
             'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),

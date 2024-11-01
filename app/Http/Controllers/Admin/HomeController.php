@@ -6,6 +6,7 @@ use App\Models\Makanan;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Notification;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -15,6 +16,7 @@ class HomeController extends Controller
         return view('pages.home', [
             'foods' => Makanan::count(),
             'users' => User::count(),
+            'notifications' => Notification::count(),
         ]);
     }
 }

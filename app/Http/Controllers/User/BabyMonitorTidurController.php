@@ -15,7 +15,8 @@ class BabyMonitorTidurController extends Controller
         if (!$request->get('tanggal')) return $this->error('Parameter tanggal tidak boleh kosong');
 
         $daftarMonitorTidur = MonitorTidur::where('baby_id', $baby->id)
-            ->whereDate('tanggal', $request->get('tanggal'))->get();
+            ->whereDate('tanggal', $request->get('tanggal'))
+            ->orderBy('tidur')->get();
 
         return $this->success([
             'monitorTidur' => BabyMonitorTidurResource::collection($daftarMonitorTidur),
@@ -35,7 +36,8 @@ class BabyMonitorTidurController extends Controller
         MonitorTidur::create($data);
 
         $daftarMonitorTidur = MonitorTidur::where('baby_id', $baby->id)
-            ->whereDate('tanggal', $request->get('tanggal'))->get();
+            ->whereDate('tanggal', today())
+            ->orderBy('tidur')->get();
 
         return $this->success([
             'monitorTidur' => BabyMonitorTidurResource::collection($daftarMonitorTidur),
@@ -47,7 +49,8 @@ class BabyMonitorTidurController extends Controller
         $monitorTidur->delete();
 
         $daftarMonitorTidur = MonitorTidur::where('baby_id', $baby->id)
-            ->whereDate('tanggal', $request->get('tanggal'))->get();
+            ->whereDate('tanggal', today())
+            ->orderBy('tidur')->get();
 
         return $this->success([
             'monitorTidur' => BabyMonitorTidurResource::collection($daftarMonitorTidur),

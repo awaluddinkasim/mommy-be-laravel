@@ -10,19 +10,24 @@ if (! function_exists('getDurationString')) {
 
         $diffInSeconds = $start->diffInSeconds($end);
 
-        $minutes = floor($diffInSeconds / 60);
+        $hours = floor($diffInSeconds / 3600);
+        $minutes = floor(($diffInSeconds % 3600) / 60);
         $seconds = $diffInSeconds % 60;
 
         $result = [];
 
-        if ($minutes > 0) {
+        if ($hours > 0) {
+            $result[] = $hours . ' jam';
+        }
+
+        if ($minutes > 0 || ($hours > 0 && $seconds > 0)) {
             $result[] = $minutes . ' menit';
         }
 
-        if ($seconds > 0) {
+        if ($seconds > 0 || empty($result)) {
             $result[] = $seconds . ' detik';
         }
 
-        return $result ? implode(' ', $result) : '0 detik';
+        return implode(' ', $result);
     }
 }

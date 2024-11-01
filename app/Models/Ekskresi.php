@@ -15,5 +15,6 @@ class Ekskresi extends Model
         'baby_id',
         'tanggal',
         'ekskresi',
+        'pukul'
     ];
 }

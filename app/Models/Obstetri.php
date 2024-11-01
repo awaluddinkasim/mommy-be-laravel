@@ -38,7 +38,7 @@ class Obstetri extends Model
 
     public function pesan(): Attribute
     {
-        $usia = Carbon::parse($this->user->tgl_lahir)->diffInYears(Carbon::parse($this->created_at));
+        $usia = floor(Carbon::parse($this->user->tgl_lahir)->diffInYears(Carbon::parse($this->created_at)));
 
         if ($usia > 35) {
             $pesan = "Usia $usia Tahun, kehamilan di usia di atas 35 tahun membawa risiko obstetri yang lebih tinggi, seperti hipertensi, diabetes gestasional, dan komplikasi persalinan. Sangat penting untuk melakukan pemantauan kesehatan secara rutin dan menjaga gaya hidup sehat, termasuk pola makan seimbang dan olahraga ringan. Diskusikan dengan dokter Anda tentang perencanaan persalinan, serta pemeriksaan rutin untuk memastikan pemulihan pascapersalinan yang optimal.";

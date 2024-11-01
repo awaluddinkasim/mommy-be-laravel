@@ -15,7 +15,8 @@ class BabyEkskresiController extends Controller
         if (!$request->get('tanggal')) return $this->error('Parameter tanggal tidak boleh kosong');
 
         $daftarEkskresi = Ekskresi::where('baby_id', $baby->id)
-            ->whereDate('tanggal', $request->get('tanggal'))->get();
+            ->whereDate('tanggal', $request->get('tanggal'))
+            ->orderBy('pukul')->get();
 
         return $this->success([
             'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),
@@ -34,12 +35,14 @@ class BabyEkskresiController extends Controller
             Ekskresi::insert([
                 [
                     'baby_id' => $baby->id,
-                    'ekskresi' => 'BAK',
+                    'tanggal' => $data['tanggal'],
+                    'ekskresi' => 'Buang Air Kecil',
                     'pukul' => $data['pukul']
                 ],
                 [
                     'baby_id' => $baby->id,
-                    'ekskresi' => 'BAB',
+                    'tanggal' => $data['tanggal'],
+                    'ekskresi' => 'Buang Air Besar',
                     'pukul' => $data['pukul']
                 ]
             ]);
@@ -49,19 +52,21 @@ class BabyEkskresiController extends Controller
         }
 
         $daftarEkskresi = Ekskresi::where('baby_id', $baby->id)
-            ->whereDate('tanggal', today())->get();
+            ->whereDate('tanggal', today())
+            ->orderBy('pukul')->get();
 
         return $this->success([
             'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),
         ]);
     }
 
-    public function destroy(Request $request, Baby $baby, Ekskresi $ekskresi)
+    public function destroy(Baby $baby, Ekskresi $ekskresi)
     {
         $ekskresi->delete();
 
         $daftarEkskresi = Ekskresi::where('baby_id', $baby->id)
-            ->whereDate('tanggal', today())->get();
+            ->whereDate('tanggal', today())
+            ->orderBy('pukul')->get();
 
         return $this->success([
             'ekskresi' => BabyEkskresiResource::collection($daftarEkskresi),

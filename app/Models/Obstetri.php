@@ -48,6 +48,30 @@ class Obstetri extends Model
             $pesan = "Usia $usia Tahun, kehamilan pada usia remaja meningkatkan risiko kekurangan gizi, anemia, dan kelahiran prematur. Pastikan Anda mendapatkan dukungan nutrisi yang memadai dan melakukan pemantauan kesehatan secara rutin untuk mencegah komplikasi lebih lanjut. Konsumsi makanan yang kaya zat besi, kalsium, dan protein sangat penting untuk membantu pemulihan dan menjaga kesehatan Anda serta bayi.";
         }
 
+        if ($this->kehamilan == 1 || $this->kehamilan == 2) {
+            $pesan = $pesan . "\n\nKehamilan pertama atau kedua biasanya membawa risiko yang lebih rendah dibandingkan dengan kehamilan yang lebih lanjut. Namun, tetaplah menjaga pola makan bergizi seimbang dan konsultasi secara rutin dengan tenaga kesehatan untuk memastikan bahwa pemulihan pascapersalinan Anda berjalan dengan baik. Dukungan dari keluarga dan tenaga kesehatan juga sangat penting dalam proses pemulihan Anda.";
+        }
+
+        if ($this->kehamilan >= 3) {
+            $pesan = $pesan . "\n\nSetiap kehamilan berikutnya membawa risiko yang meningkat terhadap komplikasi seperti anemia, perdarahan postpartum, dan penurunan cadangan nutrisi tubuh. Pastikan untuk memantau kesehatan Anda secara ketat dan berkonsultasi dengan tenaga kesehatan. Meningkatkan asupan nutrisi yang kaya zat besi, kalsium, dan protein sangat penting untuk mendukung pemulihan dan mencegah kelelahan pasca kehamilan.";
+        }
+
+        if ($this->metode_persalinan == "normal") {
+            $pesan = $pesan . "\n\nDengan riwayat persalinan normal, Anda memiliki risiko obstetri yang lebih rendah dalam persalinan berikutnya. Meski demikian, penting untuk tetap menjaga kesehatan tubuh melalui pola makan bergizi dan aktivitas fisik yang sesuai. Pastikan Anda mengikuti pemeriksaan pascapersalinan rutin untuk memastikan pemulihan optimal dan kesehatan jangka panjang.";
+        }
+
+        if ($this->metode_persalinan == "caesar") {
+            $pesan = $pesan . "\n\nSetelah persalinan sesar, penting untuk memberikan waktu yang cukup bagi tubuh untuk pulih, terutama jika merencanakan kehamilan berikutnya. Waspadai tanda-tanda infeksi atau komplikasi pada bekas luka operasi. Jaga asupan gizi yang seimbang dan istirahat cukup. Diskusikan dengan dokter tentang rencana pemulihan yang sesuai, serta kapan waktu yang aman untuk mempertimbangkan kehamilan berikutnya.";
+        }
+
+        if ($this->jarak_kelahiran < 2 && $this->kehamilan != 1) {
+            $pesan = $pesan . "\n\nJarak kehamilan yang kurang dari dua tahun dapat meningkatkan risiko komplikasi seperti kelahiran prematur dan perdarahan. Sangat penting untuk memperhatikan pemulihan pascapersalinan dan memperbaiki status gizi Anda. Konsultasikan dengan dokter tentang rencana pemulihan kesehatan, serta penggunaan kontrasepsi yang sesuai untuk mengatur jarak kehamilan berikutnya guna mengurangi risiko di masa depan.";
+        }
+
+        if ($this->jarak_kelahiran > 2 && $this->kehamilan != 1) {
+            $pesan = $pesan . "\n\nJarak kehamilan yang lebih dari dua tahun memungkinkan tubuh Anda pulih sepenuhnya antara kehamilan, mengurangi risiko komplikasi obstetri. Pertahankan pola makan sehat dan aktivitas fisik teratur untuk mempersiapkan tubuh Anda tetap sehat di masa mendatang. Selalu konsultasikan dengan dokter untuk pemeriksaan rutin dan perencanaan keluarga.";
+        }
+
         return Attribute::make(
             get: fn() => $pesan
         );

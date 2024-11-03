@@ -17,6 +17,7 @@ class LaktasiGrafikResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'tanggal' => $this->tanggal,
             'durasi' => round(Carbon::parse($this->mulai)->diffInMinutes($this->selesai), 2),
         ];
     }

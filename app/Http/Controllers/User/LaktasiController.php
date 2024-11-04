@@ -110,8 +110,8 @@ class LaktasiController extends Controller
         return $this->success([
             'kiri' => LaktasiGrafikResource::collection($kiri),
             'kanan' => LaktasiGrafikResource::collection($kanan),
-            'kiriMingguan' => LaktasiGrafikResource::collection($kiriMingguan),
-            'kananMingguan' => LaktasiGrafikResource::collection($kananMingguan),
+            'kiriMingguan' => $kiriMingguan,
+            'kananMingguan' => $kananMingguan,
         ]);
     }
 }

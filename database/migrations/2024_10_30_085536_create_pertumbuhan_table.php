@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pertumbuhan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('baby_id')->constrained('babies')->cascadeOnDelete();
-            $table->date('tanggal');
+            $table->integer('usia');
             $table->double('berat_badan');
             $table->double('panjang_badan');
             $table->timestamps();

@@ -16,9 +16,8 @@ class LaktasiGrafikResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => $this->id,
-            'tanggal' => $this->tanggal,
             'durasi' => round(Carbon::parse($this->mulai)->diffInMinutes($this->selesai), 2),
+            'tanggal' => $this->created_at,
         ];
     }
 }

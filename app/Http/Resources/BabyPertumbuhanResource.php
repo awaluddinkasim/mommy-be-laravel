@@ -16,7 +16,7 @@ class BabyPertumbuhanResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'tanggal' => $this->tanggal,
+            'usia' => $this->usia,
             'berat_badan' => $this->berat_badan,
             'panjang_badan' => $this->panjang_badan,
         ];

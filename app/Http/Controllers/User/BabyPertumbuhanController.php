@@ -13,7 +13,7 @@ class BabyPertumbuhanController extends Controller
     public function get(Baby $baby)
     {
         $daftarPertumbuhan = Pertumbuhan::where('baby_id', $baby->id)
-            ->orderBy('tanggal')->get();
+            ->orderBy('usia')->get();
 
         return $this->success([
             'pertumbuhan' => BabyPertumbuhanResource::collection($daftarPertumbuhan)
@@ -23,7 +23,7 @@ class BabyPertumbuhanController extends Controller
     public function store(Request $request, Baby $baby)
     {
         $data = $request->validate([
-            'tanggal' => 'required',
+            'usia' => 'required',
             'berat_badan' => 'required',
             'panjang_badan' => 'required',
         ]);
@@ -33,7 +33,7 @@ class BabyPertumbuhanController extends Controller
         Pertumbuhan::create($data);
 
         $daftarPertumbuhan = Pertumbuhan::where('baby_id', $baby->id)
-            ->orderBy('tanggal')->get();
+            ->orderBy('usia')->get();
 
         return $this->success([
             'pertumbuhan' => BabyPertumbuhanResource::collection($daftarPertumbuhan)
@@ -45,7 +45,7 @@ class BabyPertumbuhanController extends Controller
         $pertumbuhan->delete();
 
         $daftarPertumbuhan = Pertumbuhan::where('baby_id', $baby->id)
-            ->orderBy('tanggal')->get();
+            ->orderBy('usia')->get();
 
         return $this->success([
             'pertumbuhan' => BabyPertumbuhanResource::collection($daftarPertumbuhan)

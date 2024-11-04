@@ -13,7 +13,7 @@ class Pertumbuhan extends Model
 
     protected $fillable = [
         'baby_id',
-        'tanggal',
+        'usia',
         'berat_badan',
         'panjang_badan',
     ];

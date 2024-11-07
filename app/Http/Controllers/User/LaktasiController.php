@@ -10,6 +10,7 @@ use App\Http\Resources\LaktasiGrafikResource;
 use App\Http\Resources\LaktasiResource;
 use App\Models\Baby;
 use Carbon\Carbon;
+use Exception;
 
 class LaktasiController extends Controller
 {
@@ -76,10 +77,7 @@ class LaktasiController extends Controller
 
         // Mengelompokkan data berdasarkan tanggal dan posisi
         $dataMingguan = $riwayatLaktasiMingguan->groupBy(function ($item) {
-            return [
-                'tanggal' => $item->created_at->format('Y-m-d'),
-                'posisi' => $item->posisi
-            ];
+            return ['tanggal' => $item->created_at->format('Y-m-d')];
         });
 
         // Menyiapkan data untuk chart
@@ -90,16 +88,22 @@ class LaktasiController extends Controller
         for ($date = clone $startOfWeek; $date <= $endOfWeek; $date->addDay()) {
             $currentDate = $date->format('Y-m-d');
 
-            // Menghitung rata-rata untuk posisi Kiri
-            $dataKiri = collect($dataMingguan[$currentDate]['Kiri'] ?? [])->avg('durasi');
+            if (isset($dataMingguan[$currentDate])) {
+                // Menghitung rata-rata untuk posisi Kiri
+                $dataKiri = $dataMingguan[$currentDate]->where('posisi', 'Kiri')->avg('durasi');
+
+
+                // Menghitung rata-rata untuk posisi Kanan
+                $dataKanan = $dataMingguan[$currentDate]->where('posisi', 'Kanan')->avg('durasi');
+            } else {
+                $dataKiri = 0;
+                $dataKanan = 0;
+            }
 
             $kiriMingguan[] = [
                 'tanggal' => $currentDate,
                 'durasi' => round($dataKiri, 2) ?? 0,
             ];
-
-            // Menghitung rata-rata untuk posisi Kanan
-            $dataKanan = collect($dataMingguan[$currentDate]['Kanan'] ?? [])->avg('durasi');
 
             $kananMingguan[] = [
                 'tanggal' => $currentDate,

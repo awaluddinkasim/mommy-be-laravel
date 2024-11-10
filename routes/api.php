@@ -1,20 +1,21 @@
 <?php
 
+use App\Http\Controllers\PasswordResetController;
 use Illuminate\Http\Request;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\BabyController;
-use App\Http\Controllers\User\BabyEkskresiController;
-use App\Http\Controllers\User\BabyMonitorTidurController;
-use App\Http\Controllers\User\BabyPertumbuhanController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\LaktasiController;
 use App\Http\Controllers\User\MakananController;
 use App\Http\Controllers\User\ObstetriController;
 use App\Http\Controllers\User\StatusGiziController;
-use App\Http\Controllers\User\NutrisiHarianController;
+use App\Http\Controllers\User\BabyEkskresiController;
 use App\Http\Controllers\User\PPDScreeningController;
+use App\Http\Controllers\User\NutrisiHarianController;
+use App\Http\Controllers\User\BabyPertumbuhanController;
+use App\Http\Controllers\User\BabyMonitorTidurController;
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
@@ -68,3 +69,5 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 
     Route::post('/logout', [AuthController::class, 'logout']);
 });
+
+Route::post('/forgot-password', [PasswordResetController::class, 'forgotPassword']);

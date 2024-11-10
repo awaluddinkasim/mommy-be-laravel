@@ -36,7 +36,7 @@
             </div>
             <div class="card card-md">
                 <div class="card-body">
-                    <form action="" method="post" autocomplete="off">
+                    <form action="{{ route('password.update') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">

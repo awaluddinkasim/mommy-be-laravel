@@ -13,7 +13,7 @@ class MakananController extends Controller
     public function index(): View
     {
         return view('pages.makanan', [
-            'foods' => Makanan::all(),
+            'foods' => Makanan::orderBy('nama')->get(),
         ]);
     }
 

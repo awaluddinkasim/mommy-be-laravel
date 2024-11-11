@@ -29,7 +29,6 @@ class UserController extends Controller
             'nama' => 'required',
             'email' => 'required',
             'password' => 'nullable|min:8',
-            'tgl_lahir' => 'required',
             'no_hp' => 'required',
         ]);
 
@@ -41,7 +40,7 @@ class UserController extends Controller
 
         $user->update($data);
 
-        return redirect()->route('pengguna');
+        return $this->redirect(route('pengguna'), 'success', 'Update akun berhasil');
     }
 
     public function destroy(User $user)

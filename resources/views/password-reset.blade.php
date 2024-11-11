@@ -52,11 +52,10 @@
                                     Password Baru
                                 </label>
                                 <div class="input-group input-group-flat">
-                                    <input type="password" class="form-control" name="password"
-                                        value="{{ old('password') }}" placeholder="Masukkan password baru Anda"
-                                        required>
+                                    <input type="password" class="form-control" name="password" id="passwordInput"
+                                        placeholder="Masukkan password Anda" required>
                                     <span class="input-group-text">
-                                        <a href="#" class="link-secondary" title="Show password"
+                                        <a href="#" class="link-secondary" title="Show password" id="toggleShow"
                                             data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
                                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
                                                 height="24" viewBox="0 0 24 24" stroke-width="2"
@@ -87,7 +86,16 @@
     <script src="{{ asset('assets/js/demo.min.js?1692870487') }}" defer></script>
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/libs/sweetalert2/sweetalert2.all.min.js') }}"></script>
-    @stack('scripts')
+
+    <script>
+        $('#toggleShow').on('click', function() {
+            if ($('#passwordInput').attr('type') == 'password') {
+                $('#passwordInput').attr('type', 'text')
+            } else {
+                $('#passwordInput').attr('type', 'password')
+            }
+        })
+    </script>
 
     @if (Session::has('success'))
         <script>

@@ -28,15 +28,29 @@ class SendFCMNotification
 
         if (!$baby) return;
 
-        $notifikasi = Notification::where('week_number', $baby->usia)->first();
+        if ($baby->usia < 25) {
+            if (Carbon::now()->dayOfWeek == Carbon::SUNDAY) {
+                $notifikasi = Notification::where('week_number', $baby->usia)
+                    ->whereTime('scheduled_time', '>=', Carbon::now())
+                    ->whereTime('scheduled_time', '<=', Carbon::now()->addHour())
+                    ->first();
 
-        if (!$notifikasi) return;
+                if (!$notifikasi) return;
 
-        $startTime = Carbon::parse($notifikasi->scheduled_time)->gte(Carbon::now());
-        $endTime = Carbon::parse($notifikasi->scheduled_time)->addHour()->lte(Carbon::now());
+                OneSignal::sendToUser($baby->user->email, $notifikasi->message);
+            }
+        }
+        if ($baby->usia == 25) {
+            if (Carbon::now()->dayOfWeek == Carbon::MONDAY) {
+                $notifikasi = Notification::where('week_number', 25)
+                    ->whereTime('scheduled_time', '>=', Carbon::now())
+                    ->whereTime('scheduled_time', '<=', Carbon::now()->addHour())
+                    ->first();
 
-        if (!$startTime || !$endTime) return;
+                if (!$notifikasi) return;
 
-        OneSignal::sendToUser($baby->user->email, $notifikasi->message);
+                OneSignal::sendToUser($baby->user->email, $notifikasi->message);
+            }
+        }
     }
 }

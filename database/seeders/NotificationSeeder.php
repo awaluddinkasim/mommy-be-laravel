@@ -233,6 +233,182 @@ class NotificationSeeder extends Seeder
                 'message' => 'Hai ibu hebat, Ciptakan rutinitas tidur yang menenangkan untuk membantu Anda beralih ke tidur yang nyenyak'
             ],
 
+            // Month 2 (Weeks 5-8)
+            [
+                'month_number' => 2,
+                'week_number' => 5,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Pemantauan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Pantau pertambahan berat badan bayi Anda. Pemberian makan secara teratur membantu menjaga pertumbuhannya.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 5,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesehatan Mental',
+                'message' => 'Hai bunda, Pantau suasana hati Anda setiap hari. Tidak apa-apa untuk mencari bantuan jika Anda merasa terus-menerus sedih.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 5,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Aktivitas Fisik',
+                'message' => 'Saatnya pemeriksaan siang, Lakukan aktivitas fisik ringan, seperti berjalan singkat, untuk meningkatkan suasana hati Anda.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 5,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Konsultasi Laktasi',
+                'message' => 'Hai moms, Apakah Anda melihat adanya kesulitan menyusui? Carilah bantuan jika diperlukan, anda bisa berkonsultasi dengan konselor laktasi'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 5,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pencatatan',
+                'message' => 'Selamat malam bunda, Terus catat waktu makan dan reaksi bayi.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 5,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Rutinitas Tidur',
+                'message' => 'Hai ibu hebat, Ciptakan rutinitas tidur yang menenangkan untuk membantu Anda beralih ke tidur yang nyenyak'
+            ],
+
+            // Week 6
+            [
+                'month_number' => 2,
+                'week_number' => 6,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Pemantauan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Pantau pertambahan berat badan bayi Anda. Pemberian makan secara teratur membantu menjaga pertumbuhannya.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 6,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesehatan Mental',
+                'message' => 'Hai bunda, Pantau suasana hati Anda setiap hari. Tidak apa-apa untuk mencari bantuan jika Anda merasa terus-menerus sedih.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 6,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Aktivitas Fisik',
+                'message' => 'Saatnya pemeriksaan siang, Lakukan aktivitas fisik ringan, seperti berjalan singkat, untuk meningkatkan suasana hati Anda.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 6,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Konsultasi Laktasi',
+                'message' => 'Hai moms, Apakah Anda melihat adanya kesulitan menyusui? Carilah bantuan jika diperlukan, anda bisa berkonsultasi dengan konselor laktasi'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 6,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pencatatan',
+                'message' => 'Selamat malam bunda, Terus catat waktu makan dan reaksi bayi.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 6,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Rutinitas Tidur',
+                'message' => 'Hai ibu hebat, Ciptakan rutinitas tidur yang menenangkan untuk membantu Anda beralih ke tidur yang nyenyak'
+            ],
+
+            // Week 7
+            [
+                'month_number' => 2,
+                'week_number' => 7,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Pemantauan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Pantau pertambahan berat badan bayi Anda. Pemberian makan secara teratur membantu menjaga pertumbuhannya.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 7,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesehatan Mental',
+                'message' => 'Hai bunda, Pantau suasana hati Anda setiap hari. Tidak apa-apa untuk mencari bantuan jika Anda merasa terus-menerus sedih.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 7,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Aktivitas Fisik',
+                'message' => 'Saatnya pemeriksaan siang, Lakukan aktivitas fisik ringan, seperti berjalan singkat, untuk meningkatkan suasana hati Anda.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 7,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Konsultasi Laktasi',
+                'message' => 'Hai moms, Apakah Anda melihat adanya kesulitan menyusui? Carilah bantuan jika diperlukan, anda bisa berkonsultasi dengan konselor laktasi'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 7,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pencatatan',
+                'message' => 'Selamat malam bunda, Terus catat waktu makan dan reaksi bayi.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 7,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Rutinitas Tidur',
+                'message' => 'Hai ibu hebat, Ciptakan rutinitas tidur yang menenangkan untuk membantu Anda beralih ke tidur yang nyenyak'
+            ],
+
+            // Week 8
+            [
+                'month_number' => 2,
+                'week_number' => 8,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Pemantauan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Pantau pertambahan berat badan bayi Anda. Pemberian makan secara teratur membantu menjaga pertumbuhannya.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 8,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesehatan Mental',
+                'message' => 'Hai bunda, Pantau suasana hati Anda setiap hari. Tidak apa-apa untuk mencari bantuan jika Anda merasa terus-menerus sedih.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 8,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Aktivitas Fisik',
+                'message' => 'Saatnya pemeriksaan siang, Lakukan aktivitas fisik ringan, seperti berjalan singkat, untuk meningkatkan suasana hati Anda.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 8,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Konsultasi Laktasi',
+                'message' => 'Hai moms, Apakah Anda melihat adanya kesulitan menyusui? Carilah bantuan jika diperlukan, anda bisa berkonsultasi dengan konselor laktasi'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 8,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pencatatan',
+                'message' => 'Selamat malam bunda, Terus catat waktu makan dan reaksi bayi.'
+            ],
+            [
+                'month_number' => 2,
+                'week_number' => 8,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Rutinitas Tidur',
+                'message' => 'Hai ibu hebat, Ciptakan rutinitas tidur yang menenangkan untuk membantu Anda beralih ke tidur yang nyenyak'
+            ],
+
             // Month 3 (Weeks 9-12)
             [
                 'month_number' => 3,
@@ -272,6 +448,138 @@ class NotificationSeeder extends Seeder
             [
                 'month_number' => 3,
                 'week_number' => 9,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Perubahan Suasana Hati',
+                'message' => 'Hai ibu hebat, dengan mengakui adanya perubahan suasana hati, akan lebih mudah untuk mengenali dan mengatasinya, jangan abai ya.'
+            ],
+
+            // Week 10
+            [
+                'month_number' => 3,
+                'week_number' => 10,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Efisiensi Menyusui',
+                'message' => 'Saatnya pemeriksaann pagi, Bayi mungkin mulai lebih efisien dalam menyusu. Perhatikan tanda-tanda kenyang.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 10,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Dukungan Keluarga',
+                'message' => 'Hai bunda, Apakah Anda merasa sekitar anda mendukung utuk menyusui? Bicaralah dengan suami atau keluarga tentang bagaimana bunda ingin dibantu dan didukung dalam memberi ASI'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 10,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Pola Makan',
+                'message' => 'Hai moms, Apakah Anda masih memberi makan sesuai permintaan? Ini penting untuk menjaga pasokan ASI yang banyak.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 10,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Rasa Syukur',
+                'message' => 'Selamat siang bunda, Latih rasa syukur. Catat tiga hal yang Anda syukuri hari ini.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 10,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Evaluasi Kepuasan',
+                'message' => 'Hai bunda, Evaluasi apakah bayi Anda puas setelah menyusu, salah satu tandanya adalah bayi bisa bersistirahat dengan tenang setelah sesi menyusui.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 10,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Perubahan Suasana Hati',
+                'message' => 'Hai ibu hebat, dengan mengakui adanya perubahan suasana hati, akan lebih mudah untuk mengenali dan mengatasinya, jangan abai ya.'
+            ],
+
+            // Week 11
+            [
+                'month_number' => 3,
+                'week_number' => 11,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Efisiensi Menyusui',
+                'message' => 'Saatnya pemeriksaann pagi, Bayi mungkin mulai lebih efisien dalam menyusu. Perhatikan tanda-tanda kenyang.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 11,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Dukungan Keluarga',
+                'message' => 'Hai bunda, Apakah Anda merasa sekitar anda mendukung utuk menyusui? Bicaralah dengan suami atau keluarga tentang bagaimana bunda ingin dibantu dan didukung dalam memberi ASI'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 11,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Pola Makan',
+                'message' => 'Hai moms, Apakah Anda masih memberi makan sesuai permintaan? Ini penting untuk menjaga pasokan ASI yang banyak.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 11,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Rasa Syukur',
+                'message' => 'Selamat siang bunda, Latih rasa syukur. Catat tiga hal yang Anda syukuri hari ini.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 11,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Evaluasi Kepuasan',
+                'message' => 'Hai bunda, Evaluasi apakah bayi Anda puas setelah menyusu, salah satu tandanya adalah bayi bisa bersistirahat dengan tenang setelah sesi menyusui.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 11,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Perubahan Suasana Hati',
+                'message' => 'Hai ibu hebat, dengan mengakui adanya perubahan suasana hati, akan lebih mudah untuk mengenali dan mengatasinya, jangan abai ya.'
+            ],
+
+            // Week 12
+            [
+                'month_number' => 3,
+                'week_number' => 12,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Efisiensi Menyusui',
+                'message' => 'Saatnya pemeriksaann pagi, Bayi mungkin mulai lebih efisien dalam menyusu. Perhatikan tanda-tanda kenyang.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 12,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Dukungan Keluarga',
+                'message' => 'Hai bunda, Apakah Anda merasa sekitar anda mendukung utuk menyusui? Bicaralah dengan suami atau keluarga tentang bagaimana bunda ingin dibantu dan didukung dalam memberi ASI'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 12,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Pola Makan',
+                'message' => 'Hai moms, Apakah Anda masih memberi makan sesuai permintaan? Ini penting untuk menjaga pasokan ASI yang banyak.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 12,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Rasa Syukur',
+                'message' => 'Selamat siang bunda, Latih rasa syukur. Catat tiga hal yang Anda syukuri hari ini.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 12,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Evaluasi Kepuasan',
+                'message' => 'Hai bunda, Evaluasi apakah bayi Anda puas setelah menyusu, salah satu tandanya adalah bayi bisa bersistirahat dengan tenang setelah sesi menyusui.'
+            ],
+            [
+                'month_number' => 3,
+                'week_number' => 12,
                 'scheduled_time' => '22:00:00',
                 'title' => 'Perubahan Suasana Hati',
                 'message' => 'Hai ibu hebat, dengan mengakui adanya perubahan suasana hati, akan lebih mudah untuk mengenali dan mengatasinya, jangan abai ya.'
@@ -321,6 +629,138 @@ class NotificationSeeder extends Seeder
                 'message' => 'Hai ibu hebat, Renungkan kesehatan emosional Anda. Apakah Anda telah berbuat baik pada diri sendiri hari ini?'
             ],
 
+            // Week 14
+            [
+                'month_number' => 4,
+                'week_number' => 14,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Percepatan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Percepatan pertumbuhan bisa terjadi. Bayi Anda mungkin menyusu lebih sering bulan ini.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 14,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Dukungan Profesional',
+                'message' => 'Hai moms, Prioritaskan kesehatan mental Anda. Pertimbangkan untuk berbicara dengan terapis jika Anda membutuhkan dukungan profesional.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 14,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Penggunaan Payudara',
+                'message' => 'Apakah Anda menawarkan kedua payudara setiap kali sesi menyusui? Jangan lupa di catat ya'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 14,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Sosialisasi',
+                'message' => 'Hai bunda, Bersosialisasi dengan teman atau bergabung dengan kelompok dukungan menyusui untuk berbagi pengalaman Anda bisa menyenangkan loh.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 14,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Tumbuh Gigi',
+                'message' => 'Selamat malam bunda, Pantau tanda-tanda tumbuh gigi yang mungkin mempengaruhi proses menyusui.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 14,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Kesehatan Emosional',
+                'message' => 'Hai ibu hebat, Renungkan kesehatan emosional Anda. Apakah Anda telah berbuat baik pada diri sendiri hari ini?'
+            ],
+
+            // Week 15
+            [
+                'month_number' => 4,
+                'week_number' => 15,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Percepatan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Percepatan pertumbuhan bisa terjadi. Bayi Anda mungkin menyusu lebih sering bulan ini.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 15,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Dukungan Profesional',
+                'message' => 'Hai moms, Prioritaskan kesehatan mental Anda. Pertimbangkan untuk berbicara dengan terapis jika Anda membutuhkan dukungan profesional.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 15,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Penggunaan Payudara',
+                'message' => 'Apakah Anda menawarkan kedua payudara setiap kali sesi menyusui? Jangan lupa di catat ya'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 15,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Sosialisasi',
+                'message' => 'Hai bunda, Bersosialisasi dengan teman atau bergabung dengan kelompok dukungan menyusui untuk berbagi pengalaman Anda bisa menyenangkan loh.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 15,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Tumbuh Gigi',
+                'message' => 'Selamat malam bunda, Pantau tanda-tanda tumbuh gigi yang mungkin mempengaruhi proses menyusui.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 15,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Kesehatan Emosional',
+                'message' => 'Hai ibu hebat, Renungkan kesehatan emosional Anda. Apakah Anda telah berbuat baik pada diri sendiri hari ini?'
+            ],
+
+            // Week 16
+            [
+                'month_number' => 4,
+                'week_number' => 16,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Percepatan Pertumbuhan',
+                'message' => 'Selamat pagi bunda, Percepatan pertumbuhan bisa terjadi. Bayi Anda mungkin menyusu lebih sering bulan ini.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 16,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Dukungan Profesional',
+                'message' => 'Hai moms, Prioritaskan kesehatan mental Anda. Pertimbangkan untuk berbicara dengan terapis jika Anda membutuhkan dukungan profesional.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 16,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Penggunaan Payudara',
+                'message' => 'Apakah Anda menawarkan kedua payudara setiap kali sesi menyusui? Jangan lupa di catat ya'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 16,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Sosialisasi',
+                'message' => 'Hai bunda, Bersosialisasi dengan teman atau bergabung dengan kelompok dukungan menyusui untuk berbagi pengalaman Anda bisa menyenangkan loh.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 16,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Tumbuh Gigi',
+                'message' => 'Selamat malam bunda, Pantau tanda-tanda tumbuh gigi yang mungkin mempengaruhi proses menyusui.'
+            ],
+            [
+                'month_number' => 4,
+                'week_number' => 16,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Kesehatan Emosional',
+                'message' => 'Hai ibu hebat, Renungkan kesehatan emosional Anda. Apakah Anda telah berbuat baik pada diri sendiri hari ini?'
+            ],
+
             // Month 5 (Weeks 17-20)
             [
                 'month_number' => 5,
@@ -360,6 +800,138 @@ class NotificationSeeder extends Seeder
             [
                 'month_number' => 5,
                 'week_number' => 17,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Pantau Mood',
+                'message' => 'Hai ibu hebat, Pantau setiap perubahan suasana hati dan tingkat energi. Konsistensi dan keseimbangan adalah kunci kesehatan jiwa.'
+            ],
+
+            // Week 18
+            [
+                'month_number' => 5,
+                'week_number' => 18,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Tummy Time',
+                'message' => 'Hai moms, Perkenalkan tummy time setelah menyusui untuk membantu perkembangan bayi Anda, terutama kekuatan otot dan tulang bayi.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 18,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Keseimbangan Peran',
+                'message' => 'Selamat pagi bunda, tidak salah bila perempuan menyeimbangkan tanggung jawab sebagai ibu rumah tangga, tapi kalau kewalahan ibu bisa minta bantuan ke suami atau keluarga.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 18,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Pemantauan Pola',
+                'message' => 'Perhatikan baik-baik pola pemberian makan dan perubahan apa pun yang nampak pada bayi anda.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 18,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Waktu Hobi',
+                'message' => 'Hai bunda, Lakukan hobi atau aktivitas yang membawa kegembiraan dan relaksasi.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 18,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pemeriksaan Popok',
+                'message' => 'Hai moms, pastikan bayi Anda masih tidak memakai popok yang basah dan kotor untuk menjamin tidur yang efektif'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 18,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Pantau Mood',
+                'message' => 'Hai ibu hebat, Pantau setiap perubahan suasana hati dan tingkat energi. Konsistensi dan keseimbangan adalah kunci kesehatan jiwa.'
+            ],
+
+            // Week 19
+            [
+                'month_number' => 5,
+                'week_number' => 19,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Tummy Time',
+                'message' => 'Hai moms, Perkenalkan tummy time setelah menyusui untuk membantu perkembangan bayi Anda, terutama kekuatan otot dan tulang bayi.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 19,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Keseimbangan Peran',
+                'message' => 'Selamat pagi bunda, tidak salah bila perempuan menyeimbangkan tanggung jawab sebagai ibu rumah tangga, tapi kalau kewalahan ibu bisa minta bantuan ke suami atau keluarga.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 19,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Pemantauan Pola',
+                'message' => 'Perhatikan baik-baik pola pemberian makan dan perubahan apa pun yang nampak pada bayi anda.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 19,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Waktu Hobi',
+                'message' => 'Hai bunda, Lakukan hobi atau aktivitas yang membawa kegembiraan dan relaksasi.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 19,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pemeriksaan Popok',
+                'message' => 'Hai moms, pastikan bayi Anda masih tidak memakai popok yang basah dan kotor untuk menjamin tidur yang efektif'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 19,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Pantau Mood',
+                'message' => 'Hai ibu hebat, Pantau setiap perubahan suasana hati dan tingkat energi. Konsistensi dan keseimbangan adalah kunci kesehatan jiwa.'
+            ],
+
+            // Week 20
+            [
+                'month_number' => 5,
+                'week_number' => 20,
+                'scheduled_time' => '07:00:00',
+                'title' => 'Tummy Time',
+                'message' => 'Hai moms, Perkenalkan tummy time setelah menyusui untuk membantu perkembangan bayi Anda, terutama kekuatan otot dan tulang bayi.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 20,
+                'scheduled_time' => '10:00:00',
+                'title' => 'Keseimbangan Peran',
+                'message' => 'Selamat pagi bunda, tidak salah bila perempuan menyeimbangkan tanggung jawab sebagai ibu rumah tangga, tapi kalau kewalahan ibu bisa minta bantuan ke suami atau keluarga.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 20,
+                'scheduled_time' => '13:00:00',
+                'title' => 'Pemantauan Pola',
+                'message' => 'Perhatikan baik-baik pola pemberian makan dan perubahan apa pun yang nampak pada bayi anda.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 20,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Waktu Hobi',
+                'message' => 'Hai bunda, Lakukan hobi atau aktivitas yang membawa kegembiraan dan relaksasi.'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 20,
+                'scheduled_time' => '19:00:00',
+                'title' => 'Pemeriksaan Popok',
+                'message' => 'Hai moms, pastikan bayi Anda masih tidak memakai popok yang basah dan kotor untuk menjamin tidur yang efektif'
+            ],
+            [
+                'month_number' => 5,
+                'week_number' => 20,
                 'scheduled_time' => '22:00:00',
                 'title' => 'Pantau Mood',
                 'message' => 'Hai ibu hebat, Pantau setiap perubahan suasana hati dan tingkat energi. Konsistensi dan keseimbangan adalah kunci kesehatan jiwa.'
@@ -409,17 +981,149 @@ class NotificationSeeder extends Seeder
                 'message' => 'Hai ibu hebat, Tinjau perjalanan kesehatan mental Anda, ingatlah untuk selalu menghargai diri sendiri, sekecil apapun itu, sampai di sini anda itu ibu yang hebat loh, semangat.'
             ],
 
+            // Week 22
+            [
+                'month_number' => 6,
+                'week_number' => 22,
+                'scheduled_time' => '07:00:00',
+                'title' => 'MPASI',
+                'message' => 'Saatnya pemeriksaan pagi, Makanan padat (MP-ASI) mungkin akan segera diperkenalkan, namun pemberian ASI harus tetap dilanjutkan sesuai permintaan ya.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 22,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesadaran Mental',
+                'message' => 'Hai moms, Latih kesadaran mental dengan meluangkan beberapa menit untuk hadir dan fokus pada napas Anda. Lakukan teknik relaksasi napas bila perlu'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 22,
+                'scheduled_time' => '13:00:00',
+                'title' => 'ASI Eksklusif',
+                'message' => 'Hai bunda, semangat menyusui, sebentar lagi ASI eksklusif mu tercapai loh, selamat ya.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 22,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Koneksi Sosial',
+                'message' => 'Selamat siang bunda, Tetap terhubung dengan orang yang Anda cintai ya seperti sahabat, teman, saudara. Dukungan emosional sangat penting untuk perempuan tetap sehat secara utuh.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 22,
+                'scheduled_time' => '19:00:00',
+                'title' => 'ASI dan MPASI',
+                'message' => 'Saatnya pemeriksaan malam, pertahankan pemberian ASI sebagai sumber kenyamanan dan nutrisi bahkan dengan pengenalan makanan padat.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 22,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Perjalanan Mental',
+                'message' => 'Hai ibu hebat, Tinjau perjalanan kesehatan mental Anda, ingatlah untuk selalu menghargai diri sendiri, sekecil apapun itu, sampai di sini anda itu ibu yang hebat loh, semangat.'
+            ],
+
+            // Week 23
+            [
+                'month_number' => 6,
+                'week_number' => 23,
+                'scheduled_time' => '07:00:00',
+                'title' => 'MPASI',
+                'message' => 'Saatnya pemeriksaan pagi, Makanan padat (MP-ASI) mungkin akan segera diperkenalkan, namun pemberian ASI harus tetap dilanjutkan sesuai permintaan ya.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 23,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesadaran Mental',
+                'message' => 'Hai moms, Latih kesadaran mental dengan meluangkan beberapa menit untuk hadir dan fokus pada napas Anda. Lakukan teknik relaksasi napas bila perlu'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 23,
+                'scheduled_time' => '13:00:00',
+                'title' => 'ASI Eksklusif',
+                'message' => 'Hai bunda, semangat menyusui, sebentar lagi ASI eksklusif mu tercapai loh, selamat ya.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 23,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Koneksi Sosial',
+                'message' => 'Selamat siang bunda, Tetap terhubung dengan orang yang Anda cintai ya seperti sahabat, teman, saudara. Dukungan emosional sangat penting untuk perempuan tetap sehat secara utuh.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 23,
+                'scheduled_time' => '19:00:00',
+                'title' => 'ASI dan MPASI',
+                'message' => 'Saatnya pemeriksaan malam, pertahankan pemberian ASI sebagai sumber kenyamanan dan nutrisi bahkan dengan pengenalan makanan padat.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 23,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Perjalanan Mental',
+                'message' => 'Hai ibu hebat, Tinjau perjalanan kesehatan mental Anda, ingatlah untuk selalu menghargai diri sendiri, sekecil apapun itu, sampai di sini anda itu ibu yang hebat loh, semangat.'
+            ],
+
+            // Week 24
+            [
+                'month_number' => 6,
+                'week_number' => 24,
+                'scheduled_time' => '07:00:00',
+                'title' => 'MPASI',
+                'message' => 'Saatnya pemeriksaan pagi, Makanan padat (MP-ASI) mungkin akan segera diperkenalkan, namun pemberian ASI harus tetap dilanjutkan sesuai permintaan ya.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 24,
+                'scheduled_time' => '09:00:00',
+                'title' => 'Kesadaran Mental',
+                'message' => 'Hai moms, Latih kesadaran mental dengan meluangkan beberapa menit untuk hadir dan fokus pada napas Anda. Lakukan teknik relaksasi napas bila perlu'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 24,
+                'scheduled_time' => '13:00:00',
+                'title' => 'ASI Eksklusif',
+                'message' => 'Hai bunda, semangat menyusui, sebentar lagi ASI eksklusif mu tercapai loh, selamat ya.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 24,
+                'scheduled_time' => '16:00:00',
+                'title' => 'Koneksi Sosial',
+                'message' => 'Selamat siang bunda, Tetap terhubung dengan orang yang Anda cintai ya seperti sahabat, teman, saudara. Dukungan emosional sangat penting untuk perempuan tetap sehat secara utuh.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 24,
+                'scheduled_time' => '19:00:00',
+                'title' => 'ASI dan MPASI',
+                'message' => 'Saatnya pemeriksaan malam, pertahankan pemberian ASI sebagai sumber kenyamanan dan nutrisi bahkan dengan pengenalan makanan padat.'
+            ],
+            [
+                'month_number' => 6,
+                'week_number' => 24,
+                'scheduled_time' => '22:00:00',
+                'title' => 'Perjalanan Mental',
+                'message' => 'Hai ibu hebat, Tinjau perjalanan kesehatan mental Anda, ingatlah untuk selalu menghargai diri sendiri, sekecil apapun itu, sampai di sini anda itu ibu yang hebat loh, semangat.'
+            ],
+
             // Month 7 (Final notifications)
             [
                 'month_number' => 7,
-                'week_number' => 1,
+                'week_number' => 25,
                 'scheduled_time' => '10:00:00',
                 'title' => 'Pencapaian ASI Eksklusif',
                 'message' => 'Selamat Bunda, adik bayi berhasil menyusui eksklusif, saatnya pemberian MP-ASI, namun pemberian ASI harus tetap dilanjutkan sesuai permintaan ya.'
             ],
             [
                 'month_number' => 7,
-                'week_number' => 1,
+                'week_number' => 25,
                 'scheduled_time' => '16:00:00',
                 'title' => 'Selamat!',
                 'message' => 'Hai bu, kamu hebat sudah sampai di sini, selamat yah, jangan lupa banyak belajar, menjadi ibu yang bahagia itu penting loh.'

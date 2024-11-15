@@ -3,8 +3,8 @@
 namespace App\Listeners;
 
 use App\Events\PushNotification;
-use App\Http\Utils\OneSignal;
 use App\Models\Notification;
+use AwaluddinKasim\OneSignalPushNotification\OneSignal;
 use Carbon\Carbon;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;

@@ -1,6 +1,6 @@
 <x-layout title="Home">
     <div class="row row-cards">
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-6">
             <div class="card card-sm">
                 <div class="card-body">
                     <div class="row align-items-center">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
+        {{-- <div class="col-sm-6 col-lg-3">
             <div class="card card-sm">
                 <div class="card-body">
                     <div class="row align-items-center">
@@ -88,8 +88,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
+        </div> --}}
+        <div class="col-sm-6 col-lg-6">
             <div class="card card-sm">
                 <div class="card-body">
                     <div class="row align-items-center">

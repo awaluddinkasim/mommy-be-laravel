@@ -34,11 +34,9 @@ class User extends Authenticatable implements CanResetPassword
 
     protected $appends = ['usia'];
 
-    public function usia(): Attribute
+    public function babies(): HasMany
     {
-        return Attribute::make(
-            get: fn() => Carbon::parse($this->tgl_lahir)->age
-        );
+        return $this->hasMany(Baby::class);
     }
 
     public function obstetri(): HasMany
@@ -49,6 +47,13 @@ class User extends Authenticatable implements CanResetPassword
     public function ppdScreening(): HasOne
     {
         return $this->hasOne(PPDScreening::class);
+    }
+
+    public function usia(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => Carbon::parse($this->tgl_lahir)->age
+        );
     }
 
     /**

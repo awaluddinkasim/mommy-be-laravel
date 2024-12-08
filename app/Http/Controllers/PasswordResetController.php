@@ -23,7 +23,7 @@ class PasswordResetController extends Controller
         );
 
         return $status === Password::RESET_LINK_SENT
-            ? $this->success(null, "Link reset password telah dikirim ke email Anda")
+            ? $this->success(null, __($status))
             : $this->error(__($status));
     }
 
@@ -54,7 +54,7 @@ class PasswordResetController extends Controller
         );
 
         return $status === Password::PASSWORD_RESET
-            ? $this->back('success', 'Password berhasil diganti')
-            : $this->back('error', "Password tidak dapat diganti", true);
+            ? $this->back('success', __($status))
+            : $this->back('error', __($status), true);
     }
 }

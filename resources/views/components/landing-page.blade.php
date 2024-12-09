@@ -104,8 +104,9 @@
                         <div class="m-menu-header d-flex justify-content-between align-items-center d-lg-none">
 
                             <!-- Logo -->
-                            <a href="#" class="logo">
-                                <img src="images/logo.png" alt="Naxos" data-rjs="2" />
+                            <a href="/" class="logo">
+                                <img src="{{ asset('assets/img/LOGO.png') }}" alt="{{ config('app.name') }}"
+                                    data-rjs="2" />
                             </a>
 
                             <!-- Close button -->
@@ -155,8 +156,8 @@
                     <div class="col-12 col-md-6 col-lg-3 res-margin">
                         <div class="widget">
                             <p class="footer-logo">
-                                <img src="{{ asset('assets/img/LOGO.png') }}" alt="Naxos" data-rjs="2"
-                                    style="width: 64px">
+                                <img src="{{ asset('assets/img/LOGO.png') }}" alt="{{ config('app.name') }}"
+                                    data-rjs="2" style="width: 64px">
                             </p>
                             <p>
                                 Mommy Be hadir untuk membantu ibu hamil dan menyusui dalam memantau kesehatan dan

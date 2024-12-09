@@ -22,7 +22,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
     Route::get('/makanan', [MakananController::class, 'index'])->name('makanan');
     Route::post('/makanan', [MakananController::class, 'store'])->name('makanan.store');

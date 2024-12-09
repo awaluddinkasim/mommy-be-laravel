@@ -8,12 +8,21 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\MakananController;
 use App\Http\Controllers\Admin\NotifikasiController;
 use App\Http\Controllers\PasswordResetController;
+use Illuminate\Http\Response;
+
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
+
+Route::get('privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate'])->name('authenticate');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('dashboard');
 
     Route::get('/makanan', [MakananController::class, 'index'])->name('makanan');
     Route::post('/makanan', [MakananController::class, 'store'])->name('makanan.store');
@@ -37,3 +46,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/reset-password/{token}', [PasswordResetController::class, 'resetPassword'])->name('password.reset');
     Route::post('/reset-password', [PasswordResetController::class, 'updatePassword'])->name('password.update');
 });
+
+Route::get('/download', function () {
+    return response()->download(public_path('files/mommybe v1.0.9.apk'), 'mommybe v1.0.9.apk');
+})->name('download');
